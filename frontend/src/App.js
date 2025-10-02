@@ -12,7 +12,7 @@ function App() {
     setError("");
     setWeather(null);
     try {
-      const response = await axios.post("https://weather-app-1-20i9.onrender.com/api/requests", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/requests`, {
         location: loc,
       });
       setWeather(response.data);
