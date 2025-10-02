@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+input, button {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
