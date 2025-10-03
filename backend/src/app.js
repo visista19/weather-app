@@ -1,14 +1,12 @@
 const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
-const requestsRouter = require('./routes/requests');
-
 const app = express();
+const cors = require('cors');
+const requestRoutes = require('./routes/requestRoutes');
+
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/requests', requestsRouter);
+// Attach routes
+app.use('/api', requestRoutes); // now your frontend calls /api/requests
 
-app.get('/api/health', (req, res) => res.json({ ok: true }));
-
-module.exports = app;
+module.exports = app; // export the app
